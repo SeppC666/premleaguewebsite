@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap');
+/* Reset en basis stijlen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar styling */
+.navbar {
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.bg-custom {
+    background-color: #37003c;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-brand img {
+    margin-right: 0.5rem;
+}
+
+.navbar .nav-link {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #00ff85;
+}
+
+.navbar .nav-link.active {
+    color: #00ff85;
+    font-weight: bold;
+}
+
+.nav-spacer {
+    height: 76px;
+}
+
+/* Main content styling */
+main {
+    flex: 1;
+    padding: 2rem 0;
+}
+
+.section-title {
+    color: #37003c;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #00ff85;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Card stijlen */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card:not(.h-100):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card.h-100 {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Index pagina specifieke stijlen */
+.topscorer {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.topscorer-container {
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+.card-header {
+    border-bottom: none;
+}
+
+/* News Cards */
+.news-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-card h3 {
+    color: #37003c;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.news-meta {
+    display: flex;
+    gap: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.news-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .news-image {
+        height: 400px;
+    }
+}
+
+.news-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.news-content {
+    overflow: hidden;
+    flex-grow: 1;
+}
+/* STAND CSS */
+/* Tabel styling */
+.table-responsive {
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    background-color: #37003c;
+    color: white;
+    font-weight: 600;
+    border: none;
+}
+
+.team-logo {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Aangepaste kleuren voor verschillende posities */
+.champions-league {
+    background-color: rgba(13, 110, 253, 0.1) !important;
+}
+
+.europa-league {
+    background-color: rgba(25, 135, 84, 0.1) !important;
+}
+
+.relegation {
+    background-color: rgba(220, 53, 69, 0.1) !important;
+}
+
+@media screen and (max-width: 768px) {
+    .table-responsive {
+        overflow-x: auto;
+        position: relative;
+    }
+
+    /* Eerste twee kolommen (Positie en Team) vast zetten */
+    .table th:nth-child(1),
+    .table td:nth-child(1),
+    .table th:nth-child(3),
+    .table td:nth-child(3) {
+        position: sticky;
+        left: 0;
+        z-index: 1;
+    }
+
+    /* Achtergrondkleuren behouden voor sticky kolommen */
+    .champions-league td:nth-child(1),
+    .champions-league td:nth-child(3) {
+        background-color: rgba(13, 110, 253, 0.1) !important;
+    }
+
+    .europa-league td:nth-child(1),
+    .europa-league td:nth-child(3) {
+        background-color: rgba(25, 135, 84, 0.1) !important;
+    }
+
+    .relegation td:nth-child(1),
+    .relegation td:nth-child(3) {
+        background-color: rgba(220, 53, 69, 0.1) !important;
+    }
+
+    /* Thead achtergrond voor sticky kolommen */
+    .table th:nth-child(1),
+    .table th:nth-child(3) {
+        background-color: #37003c !important;
+    }
+
+    /* Logo's kleiner maken op kleine schermen */
+    .team-logo {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Nog kleinere logo's voor zeer kleine schermen */
+@media screen and (max-width: 576px) {
+    .team-logo {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Legende styling */
+.legend {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.legend h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #37003c;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+/* TEAMS CSS */
+/* Team Grid Styling */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 2rem;
+    padding: 0 15px;
+}
+
+.team-card {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.team-card h3 {
+    font-size: 1.5rem;
+    color: #37003c;
+    margin-bottom: 10px;
+}
+
+.team-card p {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 5px;
+}
+
+.team-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #37003c;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid #37003c;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.team-link:hover {
+    background-color: #37003c;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* STATISTIEKEN CSS */
+/* Stats Card Styling */
+.stats-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    height: 100%;
+}
+
+.stats-header {
+    padding: 15px 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+.stats-header h3 {
+    color: white;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.header-primary {
+    background-color: #37003c;
+}
+
+.header-success {
+    background-color: #00ff87;
+}
+
+.header-info {
+    background-color: #04f5ff;
+}
+
+.stats-body {
+    padding: 20px;
+}
+
+.stats-card .stats-body .table th {
+    border-top: none;
+    font-weight: 600;
+    color: #37003c;
+}
+
+.stats-card .table td {
+    vertical-align: middle;
+}
+
+.stats-card .table-hover tbody tr:hover {
+    background-color: rgba(55, 0, 60, 0.05);
+    transition: background-color 0.2s ease;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #37003c;
+    color: white;
+    padding: 2rem 0;
+    margin-top: auto;
+    text-align: center;
+}
+
+.footer a {
+    color: #00ff85;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .navbar-nav {
+        padding: 1rem 0;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .team-card {
+        padding: 15px;
+    }
+
+    .team-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .team-card p {
+        font-size: 0.8rem;
+    }
+
+    .team-link {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+
+    .stats-card {
+        margin-bottom: 15px;
+    }
+
+    .stats-header {
+        padding: 12px 15px;
+    }
+
+    .stats-body {
+        padding: 15px;
+    }
+
+    .stats-card .table {
+        font-size: 0.9rem;
+    }
+
+    .table {
+        font-size: 0.9rem;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    .table th,
+    .table td {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        padding: 0;
+    }
+
+    .nav-link {
+        margin: 0 0.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .nav-link {
+        margin: 0 1rem;
+    }
+}
+
+/* Geschiedenis Pagina Stijlen */
+
+.geschiedenis-pagina .section-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #37003c;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.geschiedenis-pagina .history-hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+}
+
+.geschiedenis-pagina .history-hero img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.geschiedenis-pagina .history-hero:hover img {
+    transform: scale(1.05);
+}
+
+.geschiedenis-pagina .history-item {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(55, 0, 60, 0.1);
+    margin-bottom: 2rem;
+}
+
+.geschiedenis-pagina .history-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.geschiedenis-pagina .history-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #37003c;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.geschiedenis-pagina .history-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #e90052;
+}
+
+.geschiedenis-pagina .history-text {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.geschiedenis-pagina .history-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.geschiedenis-pagina .history-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #444;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.geschiedenis-pagina .history-list li::before {
+    content: "⚽";
+    position: absolute;
+    left: 0;
+    color: #37003c;
+}
+
+/* Error pagina */
+.error-page-body {
+    background: url('../assets/Images/Error-BG.jpg') center/cover no-repeat fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.error-page-overlay {
+    background: rgba(255, 255, 255, 0.1);
+    min-height: 100vh;
+    width: 100%;
+}
+
+.error-page-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 1rem auto;
+}
+
+.error-page-code {
+    font-size: 8rem;
+    font-weight: bold;
+    color: #37003C;
+    display: inline-flex;
+    align-items: center;
+}
+
+.error-page-soccer-ball {
+    width: 80px;
+    height: 80px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    animation: error-page-bounce 2s infinite;
+}
+
+.error-page-soccer-ball i {
+    font-size: 80px;
+    color: #37003C;
+}
+
+.error-page-message {
+    font-size: 1.5rem;
+    color: #37003C;
+    margin: 1rem 0;
+}
+
+@keyframes error-page-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .error-page-code {
+        font-size: 10rem;
+    }
+    .error-page-soccer-ball {
+        width: 100px;
+        height: 100px;
+    }
+    .error-page-soccer-ball i {
+        font-size: 100px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .error-page-code {
+        font-size: 12rem;
+    }
+    .error-page-soccer-ball {
+        width: 120px;
+        height: 120px;
+    }
+    .error-page-soccer-ball i {
+        font-size: 120px;
+    }
+    .error-page-message {
+        font-size: 2rem;
+    }
+}

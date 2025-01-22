@@ -1,0 +1,121 @@
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('images/afiche spaghetti.jpg');
+    /* Centrering */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    /* Add this to ensure main content is centered */
+    width: 100%;
+    max-width: 800px; /* You can adjust this value */
+    text-align: center;
+}
+
+h1 {
+    font-family: Goldoni;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    display: block;
+    background-image: linear-gradient(
+            to right,
+            #009246 0%,
+            #009246 30%,
+            #ffffff 45%,
+            #ffffff 55%,
+            #ce2b37 70%,
+            #ce2b37 100%
+    );
+    -webkit-text-stroke: 0.5px black;
+    text-stroke: 0.5px black;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 102px;
+    font-weight: bolder;
+    -webkit-text-fill-color: transparent;
+    padding: 10px;
+}
+
+h2 {
+    color: #e74c3c;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: Goldoni;
+    font-size: 32px;
+}
+
+h3 {
+    color: #102462;
+    margin-top: 25px;
+    border-bottom: 2px solid #f51b05;
+    padding-bottom: 10px;
+    display: inline-block;
+    text-align: center;
+    font-family: Goldoni;
+    font-size: 26px;
+}
+
+section {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+
+}
+
+li {
+    margin: 10px 0;
+    color: #102462;
+    text-align: center;
+    font-family: Goldoni;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+p {
+    margin: 8px 0;
+    color: #000000;
+    text-align: center;
+    font-family: Goldoni;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.contact-info {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+footer {
+    position: relative;  /* Zodat we absolute positioning kunnen gebruiken voor het logo */
+    text-align: center;
+    width: 100%;
+    font-family: Goldoni;
+    padding-bottom: 20px;  /* Ruimte onder de footer tekst */
+}
+
+.logo {
+    position: absolute;
+    left: 10px;  /* Afstand vanaf de linkerkant */
+    bottom: 10px;  /* Afstand vanaf de onderkant */
+}
+
+.logo img {
+    width: 120px;  /* Pas deze waarde aan naar de gewenste grootte van je logo */
+    height: auto;  /* Behoudt de aspect ratio */
+}
