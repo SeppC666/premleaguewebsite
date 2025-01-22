@@ -2,11 +2,11 @@
 
 :exclamation: Houd deze repo 100% up-to-date :exclamation:
 
-| Student         | Info                               |
-|:----------------|:-----------------------------------|
-| Name            | Sepp claes                         |
-| email           | sepp.claes@hotmail.com             |
-| Github Username | SeppC666                           |
+| Student         | Info                                                                        |
+|:----------------|:----------------------------------------------------------------------------|
+| Name            | Sepp claes                                                                  |
+| email           | sepp.claes@hotmail.com                                                      |
+| Github Username | SeppC666                                                                    |
 | Hosting         | [https://premierleagueportaal.netlify.app/](https://yourdomain.netlify.app) |
 
 ## Gebruik
