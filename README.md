@@ -7,7 +7,7 @@
 | Name            | Sepp claes                                                                  |
 | email           | sepp.claes@hotmail.com                                                      |
 | Github Username | SeppC666                                                                    |
-| Hosting         | [https://premierleagueportaal.netlify.app/](https://yourdomain.netlify.app) |
+| Hosting         | [premierleagueportaal](https://premierleagueportaal.netlify.app) |
 
 ## Gebruik
 1. Start de lokale webserver vanuit de terminal van PhpStorm via het commando `npm run watch`
