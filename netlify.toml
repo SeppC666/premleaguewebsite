@@ -1,3 +1,4 @@
+# Force new deploy - [huidige datum/tijd]
 # Basis configuratie
 [build]
   publish = "/"
