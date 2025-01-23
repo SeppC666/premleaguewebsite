@@ -1,16 +1,4 @@
-# Force new deploy - [huidige datum/tijd]
-# Basis configuratie
-[build]
-  publish = "/"
-
-# 404 configuratie
 [[redirects]]
-  force = true
   from = "/*"
+  to = "/pages/404.html"
   status = 404
-  to = "/404.html"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
