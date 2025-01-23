@@ -1,4 +1,20 @@
 [[redirects]]
   from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Specifieke 404 configuratie
+[build]
+  publish = "/"
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = true
+
+
+[[redirects]]
+  from = "/*"
   to = "/404.html"
   status = 404
